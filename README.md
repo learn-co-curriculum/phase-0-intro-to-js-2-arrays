@@ -111,6 +111,8 @@ winningNumbers[3];
 // => 33
 ```
 
+***NOTE***: Most people just call it _bracket notation_ or the _bracket operator_, so don't worry too much about remembering the term _computed member access operator_.
+
 Let's take a minute to think about how we could access the **last** element in any array.
 
 If `myArray` contains 10 elements, the final element will be at `myArray[9]`. If `myArray` contains 15000 elements, the final element will be at `myArray[14999]`. So the index of the final element is always one less than the number of elements in the array. If only we had an easy way to figure out how many elements are in the array...
@@ -170,11 +172,11 @@ const coolCities = ['New York', 'San Francisco'];
 
 const allCities = ['Los Angeles', ...coolCities];
 
-allCities;
-// => ["Los Angeles", "New York", "San Francisco"]
-
 coolCities;
 // => ["New York", "San Francisco"]
+
+allCities;
+// => ["Los Angeles", "New York", "San Francisco"]
 ```
 
 We created a new array instead of modifying the original one — our `coolCities` array was untouched. We can also use the spread operator to add a new item to the end of an array without modifying the original:
@@ -183,11 +185,11 @@ const coolCats = ['Hobbes', 'Felix', 'Tom'];
 
 const allCats = [...coolCats, 'Garfield'];
 
-allCats;
-// => ["Hobbes", "Felix", "Tom", "Garfield"]
-
 coolCats;
 // => ["Hobbes", "Felix", "Tom"]
+
+allCats;
+// => ["Hobbes", "Felix", "Tom", "Garfield"]
 ```
 
 ## Removing elements from an array
@@ -421,11 +423,11 @@ const menu = ['Jalapeno Poppers', 'Cheeseburger', 'Fish and Chips', 'French Frie
 
 const newMenu = [...menu.slice(0, 1), 'Veggie Burger', 'House Salad', 'Teriyaki Tofu', ...menu.slice(3)];
 
-newMenu;
-// => ["Jalapeno Poppers", "Veggie Burger", "House Salad", "Teriyaki Tofu", "French Fries", "Onion Rings"]
-
 menu;
 // => ["Jalapeno Poppers", "Cheeseburger", "Fish and Chips", "French Fries", "Onion Rings"]
+
+newMenu;
+// => ["Jalapeno Poppers", "Veggie Burger", "House Salad", "Teriyaki Tofu", "French Fries", "Onion Rings"]
 ```
 
 Play around with this a bit until it makes sense. It's the trickiest thing that we've encountered in this lesson, so don't sweat it if it takes a little while to sink in!
