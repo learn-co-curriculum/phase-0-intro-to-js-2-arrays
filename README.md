@@ -4,7 +4,7 @@
 In this lesson, we'll introduce arrays in JavaScript and explore some basic manipulations we can do.
 
 ## Objectives
-- Explain what an array is and what it's useful for.
+- Explain what an array is and why it's useful.
 - Create arrays.
 - Access the elements in an array.
 - Add elements to an array.
