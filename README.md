@@ -36,7 +36,7 @@ const fourthNumber = 33;
 const fifthNumber = 48;
 const powerBall = 5;
 
-function logWinningNumbers (first, second, third, fourth, fifth, power) {
+function logWinningNumbers(first, second, third, fourth, fifth, power) {
   console.log('Winning numbers:', first, second, third, fourth, fifth, power);
 }
 
@@ -83,7 +83,7 @@ To get a sense of just how awesome arrays are at keeping data organized, let's r
 ```js
 const winningNumbers = [32, 9, 14, 33, 48, 5];
 
-function logWinningNumbers (numbers) {
+function logWinningNumbers(numbers) {
   console.log('Winning numbers:', numbers);
 }
 
