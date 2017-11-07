@@ -376,7 +376,7 @@ cards;
 // => ["Ace of Spades", "Jack of Clubs", "Ace of Clubs", "Nine of Diamonds", "Three of Hearts"]
 ```
 
-Or we can remove two elements and insert four new ones as our restaurant expands its vegetarian options:
+Or we can remove two elements and insert three new ones as our restaurant expands its vegetarian options:
 ```js
 const menu = ['Jalapeno Poppers', 'Cheeseburger', 'Fish and Chips', 'French Fries', 'Onion Rings'];
 
