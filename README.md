@@ -8,13 +8,13 @@ useful data structures is an array.
 
 ## Objectives
 
-- Identify data structures and arrays
-- Create arrays
-- Access the elements in an array
-- Add elements to an array
-- Remove elements from an array
-- Replace elements in an array
-- Identify nested arrays
+1. Identify data structures and arrays
+2. Create arrays
+3. Access the elements in an array
+4. Add elements to an array
+5. Remove elements from an array
+6. Replace elements in an array
+7. Identify nested arrays
 
 ## Identify Data Structures and Arrays
 
