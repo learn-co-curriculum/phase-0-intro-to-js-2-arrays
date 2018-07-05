@@ -4,17 +4,17 @@
 
 We've talked about data types in JavaScript. But what if we need a way of
 organizing data? We'll need to reach for a data structure, and one of the most
-useful data structures is an array.
+useful data structures is an `Array`.
 
 ## Objectives
 
-1. Identify data structures and arrays
-2. Create arrays
-3. Access the elements in an array
-4. Add elements to an array
-5. Remove elements from an array
-6. Replace elements in an array
-7. Identify nested arrays
+1. Identify data structures and `Array`s
+2. Create `Array`s
+3. Access the elements in an `Array`
+4. Add elements to an `Array`
+5. Remove elements from an `Array`
+6. Replace elements in an `Array`
+7. Identify nested `Array`s
 
 ## Identify Data Structures and Arrays
 
@@ -58,11 +58,11 @@ logWinningNumbers(firstNumber, secondNumber, thirdNumber, fourthNumber, fifthNum
 ```
 
 That's so much typing! There are much, much better ways to keep organize data in
-JavaScript. Let's learn about one of the most common: the _array_.
+JavaScript. Let's learn about one of the most common: the _`Array`_.
 
 ## Create Arrays
 
-An array is a list, with the items listed in a particular order, surrounded by
+An `Array` is a list, with the items listed in a particular order, surrounded by
 square brackets (`[]`):
 
 ```js
@@ -70,7 +70,7 @@ square brackets (`[]`):
 // => ["This", "is", "an", "array", "of", "strings."]
 ```
 
-The _members_ or _elements_ in an array can be data of any type:
+The _members_ or _elements_ in an `Array` can be data of any type:
 
 ```js
 ['Hello, world!', 42, null, NaN];
@@ -78,9 +78,9 @@ The _members_ or _elements_ in an array can be data of any type:
 ```
 
 Arrays are _ordered_, meaning that the elements in them will always appear in
-the same order. The array `[1, 2, 3]` is different from the array `[3, 2, 1]`.
+the same order. The `Array` `[1, 2, 3]` is different from the `Array` `[3, 2, 1]`.
 
-Just like any other type of JavaScript data, we can assign an array to a
+Just like any other type of JavaScript data, we can assign an `Array` to a
 variable:
 
 ```js
@@ -89,7 +89,7 @@ const primeNumbers = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37];
 const tvShows = ['Game of Thrones', 'True Detective', 'The Good Wife', 'Empire'];
 ```
 
-We can find out how many elements an array contains by checking the array's
+We can find out how many elements an `Array` contains by checking the `Array`'s
 built-in `length` property:
 
 ```js
@@ -99,13 +99,13 @@ myArray.length;
 // => 5
 ```
 
-We defined the above arrays using the _array literal_ syntax — that is, we
-literally typed out the array that we wanted to create, square brackets and all.
-There are other ways to create new arrays, but they are only necessary for very
-rare circumstances. For now, use array literals.
+We defined the above `Array`s using the _array literal_ syntax — that is, we
+literally typed out the `Array` that we wanted to create, square brackets and all.
+There are other ways to create new `Array`s, but they are only necessary for very
+rare circumstances. For now, use `Array` literals.
 
-To get a sense of just how effective arrays are at keeping data organized, let's
-rewrite our lottery code to use an array:
+To get a sense of just how effective `Array`s are at keeping data organized, let's
+rewrite our lottery code to use an `Array`:
 
 ```js
 const winningNumbers = [32, 9, 14, 33, 48, 5];
@@ -119,23 +119,23 @@ logWinningNumbers(winningNumbers);
 // => undefined
 ```
 
-The array organization, and we only have to remember one identifier
+The `Array` organization, and we only have to remember one identifier
 (`winningNumbers`) instead of six (`firstNumber`, `secondNumber`, and so on).
 
 The one benefit of storing all six lottery numbers separately is that we had a
 really easy way to access each individual number. For example, we could just
-reference `powerBall` to grab the sixth number. Luckily, arrays offer an equally
+reference `powerBall` to grab the sixth number. Luckily, `Array`s offer an equally
 simple syntax for accessing individual members. How can we access particular
-elements in an array when we need it?
+elements in an `Array` when we need it?
 
 ## Access the Elements in an Array
 
-Every element in an array is assigned a unique index value that corresponds to
-its place within the collection. The first element in the array is at index `0`,
+Every element in an `Array` is assigned a unique index value that corresponds to
+its place within the collection. The first element in the `Array` is at index `0`,
 the fifth element at index `4`, and the 428th element at index `427`.
 
 To access an element, we use the _computed member access operator_, which,
-conveniently enough, looks exactly like an array:
+conveniently enough, looks exactly like an `Array`:
 
 ```js
 const winningNumbers = [32, 9, 14, 33, 48, 5];
@@ -153,13 +153,13 @@ so don't worry too much about remembering the term _computed member access
 operator_.
 
 Let's take a minute to think about how we could access the **last** element in
-any array.
+any `Array`.
 
 If `myArray` contains 10 elements, the final element will be at `myArray[9]`. If
 `myArray` contains 15000 elements, the final element will be at
 `myArray[14999]`. So the index of the final element is always one less than the
-number of elements in the array. If only we had an easy way to figure out how
-many elements are in the array...
+number of elements in the `Array`. If only we had an easy way to figure out how
+many elements are in the `Array`...
 
 ```js
 const alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
@@ -180,11 +180,11 @@ to `25`, so `alphabet[alphabet.length - 1]` became `alphabet[25]`.
 
 ## Add Elements to an Array
 
-JavaScript allows us to manipulate the members in an array in a number of ways.
+JavaScript allows us to manipulate the members in an `Array` in a number of ways.
 
 ### `.push()` and `.unshift()`
 
-With the `.push()` method, we can add elements to the end of an array:
+With the `.push()` method, we can add elements to the end of an `Array`:
 ```js
 const superheroes = ['Catwoman', 'She-Hulk', 'Jessica Jones'];
 
@@ -195,7 +195,7 @@ superheroes;
 // => ["Catwoman", "She-Hulk", "Jessica Jones", "Wonder Woman"]
 ```
 
-We can also `.unshift()` elements onto the beginning of an array:
+We can also `.unshift()` elements onto the beginning of an `Array`:
 
 ```js
 const cities = ['New York', 'San Francisco'];
@@ -208,23 +208,23 @@ cities;
 ```
 
 Notice that the value returned by both methods is the `length` of the updated
-array.
+`Array`.
 
 #### Destructive vs. Nondestructive
 
-Both `.push()` and `.unshift()` update or _mutate_ the original array, adding
+Both `.push()` and `.unshift()` update or _mutate_ the original `Array`, adding
 elements directly to it. Operations that modify the original collection are
 _destructive_, and those that leave the original collection intact are
 _nondestructive_.
 
-Mutating the original array isn't necessarily a bad thing, but there's also a
-way to add elements nondestructively, leaving the original array intact.
+Mutating the original `Array` isn't necessarily a bad thing, but there's also a
+way to add elements nondestructively, leaving the original `Array` intact.
 
 ### Spread Operator
 
 ES2015 introduced the _spread operator_, which looks like an ellipsis: `...`.
-The spread operator allows us to spread out the contents of an existing array
-into a new array, adding new elements but preserving the original:
+The spread operator allows us to spread out the contents of an existing `Array`
+into a new `Array`, adding new elements but preserving the original:
 
 ```js
 const coolCities = ['New York', 'San Francisco'];
@@ -238,9 +238,9 @@ allCities;
 // => ["Los Angeles", "New York", "San Francisco"]
 ```
 
-We created a new array instead of modifying the original one — our `coolCities`
-array was untouched. We can also use the spread operator to add a new item to
-the end of an array without modifying the original:
+We created a new `Array` instead of modifying the original one — our `coolCities`
+`Array` was untouched. We can also use the spread operator to add a new item to
+the end of an `Array` without modifying the original:
 
 ```js
 const coolCats = ['Hobbes', 'Felix', 'Tom'];
@@ -261,8 +261,8 @@ and `.shift()`.
 
 ### `.pop()` and `.shift()`
 
-The `.pop()` method removes the last element in an array, destructively updating
-the original array:
+The `.pop()` method removes the last element in an `Array`, destructively updating
+the original `Array`:
 
 ```js
 const days = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
@@ -274,7 +274,7 @@ days;
 // => ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
 ```
 
-The `.shift()` method removes the first element in an array, also mutating the
+The `.shift()` method removes the first element in an `Array`, also mutating the
 original:
 
 ```js
@@ -292,14 +292,14 @@ element that was removed.
 
 ### `.slice()`
 
-To remove elements from an array nondestructively (without manipulating the
-original array), we can use the `.slice()` method. Just as the name implies, the
-`.slice()` method returns a portion, or **slice**, of an array.
+To remove elements from an `Array` nondestructively (without manipulating the
+original `Array`), we can use the `.slice()` method. Just as the name implies, the
+`.slice()` method returns a portion, or **slice**, of an `Array`.
 
 #### With No Arguments
 
 If we don't provide any arguments, `.slice()` will return a copy of the original
-array with all elements intact:
+`Array` with all elements intact:
 
 ```js
 const primes = [2, 3, 5, 7];
@@ -313,9 +313,9 @@ copyOfPrimes;
 // => [2, 3, 5, 7]
 ```
 
-Note that the array returned by `.slice()` has the same elements as the
-original, but it's a copy — **the two arrays point to different objects in
-memory**. If you add an element to one of the arrays, it does **not** get added
+Note that the `Array` returned by `.slice()` has the same elements as the
+original, but it's a copy — **the two `Array`s point to different objects in
+memory**. If you add an element to one of the `Array`s, it does **not** get added
 to the other:
 
 ```js
@@ -346,7 +346,7 @@ days.slice(2, 5);
 ```
 
 If no second argument is provided, the slice will run from the index specified
-by the first argument to the end of the array:
+by the first argument to the end of the `Array`:
 
 ```js
 const days = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
@@ -355,7 +355,7 @@ days.slice(5);
 // => ["Sat", "Sun"]
 ```
 
-To remove the first element and return a new array, we call `.slice(1)`:
+To remove the first element and return a new `Array`, we call `.slice(1)`:
 
 ```js
 const days = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
@@ -375,7 +375,7 @@ days.slice(0, days.length - 1);
 ```
 
 In fact, `.slice()` provides an easier syntax for grabbing the last element in
-an array:
+an `Array`:
 
 ```js
 const days = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
@@ -388,11 +388,11 @@ days.slice(-3);
 ```
 
 When we provide a negative index, the JavaScript engine knows to start counting
-from the last element in the array instead of the first.
+from the last element in the `Array` instead of the first.
 
 ### `.splice()`
 
-While `.slice()` allows us to return a piece of an array without mutating the
+While `.slice()` allows us to return a piece of an `Array` without mutating the
 original (nondestructive), `.splice()` performs destructive actions. Let's
 familiarize ourselves with the [MDN documentation][splice]:
 
@@ -414,8 +414,8 @@ array.splice(start)
 
 The first argument expected by `.splice()` is the index at which to begin the
 splice. If we only provide the one argument, `.splice()` will destructively
-remove a chunk of the original array beginning at the provided index and
-continuing to the end of the array:
+remove a chunk of the original `Array` beginning at the provided index and
+continuing to the end of the `Array`:
 
 ```js
 const days = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
@@ -428,7 +428,7 @@ days;
 ```
 
 Notice that `.splice()` returns the removed chunk and leaves the remaining
-elements in the original array.
+elements in the original `Array`.
 
 With a negative 'start' index, the opposite happens:
 
@@ -451,7 +451,7 @@ array.splice(start, deleteCount)
 
 When we provide two arguments to `.splice()`, the first is still the index at
 which to begin splicing, and the second dictates how many elements we want to
-remove from the array. For example, to remove `3` elements, starting with the
+remove from the `Array`. For example, to remove `3` elements, starting with the
 element at index `2`:
 
 ```js
@@ -474,8 +474,8 @@ array.splice(start, deleteCount, item1, item2, ...)
 ```
 
 After the first two, every additional argument passed to `.splice()` will be
-inserted into the array at the position indicated by the first argument. We can
-replace a single element in an array as follows, discarding a card and drawing a
+inserted into the `Array` at the position indicated by the first argument. We can
+replace a single element in an `Array` as follows, discarding a card and drawing a
 new one:
 
 ```js
@@ -502,7 +502,7 @@ menu;
 ```
 
 We aren't required to remove anything with `.splice()` — we can use it to
-insert elements anywhere within an array. Here we're adding new books to our
+insert elements anywhere within an `Array`. Here we're adding new books to our
 library in alphabetical order:
 
 ```js
@@ -515,7 +515,7 @@ books;
 // => ["Bleak House", "David Copperfield", "Great Expectations", "Oliver Twist", "Our Mutual Friend"]
 ```
 
-Notice that `.splice()` returns an empty array when we provide a second argument
+Notice that `.splice()` returns an empty `Array` when we provide a second argument
 of `0`. This makes sense because the return value is the set of elements that
 were removed, and we're telling it to remove `0` elements.
 
@@ -524,7 +524,7 @@ comfortable with it.
 
 ### Using the Computed Member Access Operator to Replace Elements
 
-If we only need to replace a single element in an array, there's a simpler
+If we only need to replace a single element in an `Array`, there's a simpler
 solution than `.splice()`:
 
 ```js
@@ -538,14 +538,14 @@ cards;
 ```
 
 However, using the computed member access operator (`[]`) is still _destructive_
-— it modifies the original array. There's a _nondestructive_ way to replace or
-add items at arbitrary points within an array, and it involves two of the
+— it modifies the original `Array`. There's a _nondestructive_ way to replace or
+add items at arbitrary points within an `Array`, and it involves two of the
 concepts we learned earlier.
 
 ### Slicing and Spreading
 
 Combining `.slice()` and the spread operator allows us to replace elements
-_nondestructively_, leaving the original array unharmed:
+_nondestructively_, leaving the original `Array` unharmed:
 
 ```js
 const menu = ['Jalapeno Poppers', 'Cheeseburger', 'Fish and Chips', 'French Fries', 'Onion Rings'];
@@ -577,12 +577,12 @@ newMenu;
 // => [["Jalapeno Poppers"], "Veggie Burger", "House Salad", "Teriyaki Tofu", ["French Fries", "Onion Rings"]]
 ```
 
-Holy nested arrays, Batman!
+Holy nested `Array`s, Batman!
 
 ![Is this the array or the array within an array?](https://curriculum-content.s3.amazonaws.com/web-development/js/data-structures/arrays-readme/insheeption.gif)
 
-That's right — an array can contain elements of **any** data type, including
-**other arrays**:
+That's right — an `Array` can contain elements of **any** data type, including
+**other `Array`s**:
 
 ```js
 const egregiouslyNestedArray = ['How', ['deep', ['can', ['we', ['go', ['?'], 'Pretty'], 'dang'], 'deep,'], 'it'], 'seems.'];
@@ -592,9 +592,9 @@ Pop that into your browser's JS console and check out the nesting:
 
 ![`egregiouslyNestedArray` in the JS console](https://curriculum-content.s3.amazonaws.com/web-development/js/data-structures/arrays-readme/egregiouslyNestedArray_in_JS_console.png)
 
-It's great that arrays allow us to store other arrays inside them, but this is a
+It's great that `Array`s allow us to store other `Array`s inside them, but this is a
 terrible way to represent a deeply nested data structure. In general, try to
-keep your arrays to no more than two levels deep. Two levels is perfect for
+keep your `Array`s to no more than two levels deep. Two levels is perfect for
 representing two-dimensional things like a tic-tac-toe board:
 
 ```js
@@ -637,7 +637,7 @@ dimensional structure.
 
 ## Conclusion
 
-We dove into data structures and the array, including how to create arrays, access elements in an array, add elements to an array, remove elements from an array and replace elements in an array. We also covered the difference between destructive and non-destructive array manipulation.
+We dove into data structures and the `Array`, including how to create `Array`s, access elements in an `Array`, add elements to an `Array`, remove elements from an `Array` and replace elements in an `Array`. We also covered the difference between destructive and non-destructive `Array` manipulation.
 
 ## Resources
 - MDN
@@ -648,5 +648,3 @@ We dove into data structures and the array, including how to create arrays, acce
 [array]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
 [slice]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice
 [splice]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice
-
-<p class='util--hide'>View <a href='https://learn.co/lessons/js-data-structures-arrays-readme'>Arrays</a> on Learn.co and start learning to code for free.</p>
