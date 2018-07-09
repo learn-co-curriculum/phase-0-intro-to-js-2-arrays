@@ -70,12 +70,16 @@ square brackets (`[]`):
 // => ["This", "is", "an", "array", "of", "strings."]
 ```
 
-The _members_ or _elements_ in an `Array` can be data of any type:
+The _members_ or _elements_ in an `Array` can be data of any type in JavaScript:
 
 ```js
 ['Hello, world!', 42, null, NaN];
 // => ["Hello, world!", 42, null, NaN]
 ```
+
+> **NOTE**: In some other languages `Arrays` _cannot be of multiple types_. In
+C, C++, Java, Swift, and others you cannot mix types. JavaScript, Python, Ruby,
+Lisp, and others permit this.
 
 Arrays are _ordered_, meaning that the elements in them will always appear in
 the same order. The `Array` `[1, 2, 3]` is different from the `Array` `[3, 2, 1]`.
