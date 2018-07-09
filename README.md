@@ -123,8 +123,11 @@ logWinningNumbers(winningNumbers);
 // => undefined
 ```
 
-The `Array` organization, and we only have to remember one identifier
-(`winningNumbers`) instead of six (`firstNumber`, `secondNumber`, and so on).
+The `Array` provides organization, and we only have to remember _one_ identifier
+(`winningNumbers`) instead of six (`firstNumber`, `secondNumber`, and so on). We
+can also call `Arrays` _expressive_ because puttng all the winning numbers in a
+shared data structure communicates to other programmers "Hey, these things go
+together" in a way that `firstNumber`, `secondNumber`, etc. _does not_.
 
 The one benefit of storing all six lottery numbers separately is that we had a
 really easy way to access each individual number. For example, we could just
