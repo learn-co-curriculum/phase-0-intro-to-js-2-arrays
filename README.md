@@ -132,8 +132,7 @@ together" in a way that `firstNumber`, `secondNumber`, etc. _does not_.
 The one benefit of storing all six lottery numbers separately is that we had a
 really easy way to access each individual number. For example, we could just
 reference `powerBall` to grab the sixth number. Luckily, `Array`s offer an equally
-simple syntax for accessing individual members. How can we access particular
-elements in an `Array` when we need it?
+simple syntax for accessing individual members.
 
 ## Access the Elements in an Array
 
