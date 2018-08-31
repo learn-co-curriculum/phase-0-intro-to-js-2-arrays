@@ -125,7 +125,7 @@ logWinningNumbers(winningNumbers);
 
 The `Array` provides organization, and we only have to remember _one_ identifier
 (`winningNumbers`) instead of six (`firstNumber`, `secondNumber`, and so on). We
-can also call `Arrays` _expressive_ because puttng all the winning numbers in a
+can also call `Arrays` _expressive_ because putting all the winning numbers in a
 shared data structure communicates to other programmers "Hey, these things go
 together" in a way that `firstNumber`, `secondNumber`, etc. _does not_.
 
