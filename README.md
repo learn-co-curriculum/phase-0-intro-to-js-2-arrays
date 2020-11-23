@@ -437,7 +437,7 @@ days;
 Notice that `.splice()` returns the removed chunk and leaves the remaining
 elements in the original `Array`.
 
-With a negative 'start' index, the opposite happens:
+With a negative 'start' index, the starting position counts backward from the end of the array:
 
 ```js
 const days = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
