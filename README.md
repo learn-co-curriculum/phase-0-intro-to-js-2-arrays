@@ -191,6 +191,7 @@ JavaScript allows us to manipulate the members in an `Array` in a number of ways
 ### `.push()` and `.unshift()`
 
 With the `.push()` method, we can add elements to the end of an `Array`:
+
 ```js
 const superheroes = ['Catwoman', 'She-Hulk', 'Jessica Jones'];
 
