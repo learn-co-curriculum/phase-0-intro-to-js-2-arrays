@@ -144,9 +144,7 @@ its place within the collection, **starting at 0**. The first element in the
 at index `427`. The _computed member access operator_ (`[]`) allows us to access
 the element at a given index.
 
-***NOTE:*** Most people just call it _bracket notation_ or the _bracket operator_,
-so don't worry too much about remembering the term _computed member access
-operator_.
+> **NOTE:** Most people just call it _bracket notation_ or the _bracket operator_, so don't worry too much about remembering the term _computed member access operator_.
 
 ### Accessing an Element
 
