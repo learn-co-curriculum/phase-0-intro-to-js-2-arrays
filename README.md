@@ -212,13 +212,7 @@ planets;
 //=> ["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune"]
 ```
 
-**Note:** You might wonder why that worked, given that we declared `planets`
-using `const`. After all, declaring with `const` is supposed to prevent us from
-reassigning the value of the variable! This is an important thing to know about
-how `const` works with `Array`s. We are not able to reassign the array _itself_
-but we **can** reassign any of its elements. We can also add or delete elements.
-JavaScript `Object`s work similarly when declared using `const` (which isn't
-surprising, given that `Array`s are a special type of `Object`).
+> **Note:** You might wonder why that worked, given that we declared `planets` using `const`. After all, declaring with `const` is supposed to prevent us from reassigning the value of the variable! This is an important thing to know about how `const` works with `Array`s. We are not able to reassign the array _itself_ but we **can** reassign any of its elements. We can also add or delete elements. JavaScript `Object`s work similarly when declared using `const` (which isn't surprising, given that `Array`s are a special type of `Object`).
 
 ### Adding an Element to the End of an Array
 
