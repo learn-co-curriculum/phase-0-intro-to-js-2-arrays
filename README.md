@@ -2,12 +2,12 @@
 
 ## Learning Goals
 
-1. Identify data structures and `Array`s
-2. Create `Array`s
-3. Access the elements in an `Array`
-4. Learn about nested `Array`s
-5. Introduce `Array` methods
-6. Understand mutability
+- Identify data structures and `Array`s
+- Create `Array`s
+- Access the elements in an `Array`
+- Learn about nested `Array`s
+- Introduce `Array` methods
+- Understand mutability
 
 ## Introduction
 
