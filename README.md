@@ -11,8 +11,8 @@
 
 ## Introduction
 
-So far, we've been focusing on JavaScript's _primitive_ data types &mdash; types
-that represent a single value &mdash; in particular, strings, Booleans, and
+So far, we've been focusing on JavaScript's _primitive_ data types — types
+that represent a single value — in particular, strings, Booleans, and
 numbers. But sometimes we need a way to store a _collection_ of data. For this,
 we need data structures. In this and the next lesson, we will learn about a very
 useful data structure: `Array`s.
@@ -105,7 +105,7 @@ myArray.length;
 // => 5
 ```
 
-We defined the above `Array`s using the _array literal_ syntax &mdash; that is, we
+We defined the above `Array`s using the _array literal_ syntax — that is, we
 literally typed out the `Array` that we wanted to create, square brackets and all.
 There are other ways to create new `Array`s, but they are only necessary for very
 rare circumstances. For now, use `Array` literals.
@@ -190,8 +190,8 @@ to `25`, so `alphabet[alphabet.length - 1]` became `alphabet[25]`.
 
 ## Updating the Value of an Element
 
-We can also use the computed member access operator (`[]`) &mdash; along with
-the assignment operator (`=`) &mdash; to update the value of an element in the
+We can also use the computed member access operator (`[]`) — along with
+the assignment operator (`=`) — to update the value of an element in the
 array. To do that, we access the element we want then reassign that element's
 value using `=`. Say we've defined an array, `planets`:
 
@@ -346,7 +346,7 @@ string.toUpperCase();
 
 As shown above, we call String methods _on_ a string or string variable using
 the dot notation. `Array` methods work in the same way. Some of them will take
-one or more arguments &mdash; for example, the element we want to add to the
+one or more arguments — for example, the element we want to add to the
 array. The arguments are passed in the parentheses after the method name.
 
 We will learn about these `Array` methods in the next lesson. Before we get to
