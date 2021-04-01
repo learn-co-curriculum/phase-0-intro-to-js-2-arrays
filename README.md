@@ -80,7 +80,7 @@ The _members_ or _elements_ in an `Array` can be data of any type in JavaScript:
 // => ["Hello, world!", 42, null, NaN]
 ```
 
-> **NOTE**: In some other languages `Arrays` _cannot include elements of multiple types_. In C, C++, Java, Swift, and others you cannot mix types. JavaScript, Python, Ruby, Lisp, and others permit this.
+> **NOTE**: In some other languages `Array`s _cannot include elements of multiple types_. In C, C++, Java, Swift, and others you cannot mix types. JavaScript, Python, Ruby, Lisp, and others permit this.
 
 Arrays are _ordered_, meaning that the elements in them will always appear in
 the same order. This also means that the `Array` `[1, 2, 3]` is different from
@@ -127,7 +127,7 @@ logWinningNumbers(winningNumbers);
 
 The `Array` provides organization, and we only have to remember _one_ identifier
 (`winningNumbers`) instead of six (`firstNumber`, `secondNumber`, and so on). We
-can also call `Arrays` _expressive_ because putting all the winning numbers in a
+can also call `Array`s _expressive_ because putting all the winning numbers in a
 shared data structure communicates to other programmers "Hey, these things go
 together."
 
@@ -382,7 +382,7 @@ accomplish.
 
 ## Conclusion
 
-In this lesson, We learned about JavaScript `Array`s, including how to create
+In this lesson, we learned about JavaScript `Array`s, including how to create
 them, access their elements, and change the value of elements. We also learned
 that arrays can contain elements of any data type, including other `Array`s; we
 refer to these as _nested_ arrays. Finally, we talked a little bit about the
