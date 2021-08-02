@@ -51,11 +51,18 @@ const fourthNumber = 33;
 const fifthNumber = 48;
 const powerBall = 5;
 
-function logWinningNumbers (first, second, third, fourth, fifth, power) {
-  console.log('Winning numbers:', first, second, third, fourth, fifth, power);
+function logWinningNumbers(first, second, third, fourth, fifth, power) {
+  console.log("Winning numbers:", first, second, third, fourth, fifth, power);
 }
 
-logWinningNumbers(firstNumber, secondNumber, thirdNumber, fourthNumber, fifthNumber, powerBall);
+logWinningNumbers(
+  firstNumber,
+  secondNumber,
+  thirdNumber,
+  fourthNumber,
+  fifthNumber,
+  powerBall
+);
 // LOG: Winning numbers: 32 9 14 33 48 5
 // => undefined
 ```
@@ -69,18 +76,20 @@ An `Array` is a list, with the items listed in a particular order, surrounded by
 square brackets (`[]`) and separated by commas:
 
 ```js
-['This', 'is', 'an', 'array', 'of', 'strings.'];
+["This", "is", "an", "array", "of", "strings."];
 // => ["This", "is", "an", "array", "of", "strings."]
 ```
 
 The _members_ or _elements_ in an `Array` can be data of any type in JavaScript:
 
 ```js
-['Hello, world!', 42, null, NaN];
+["Hello, world!", 42, null, NaN];
 // => ["Hello, world!", 42, null, NaN]
 ```
 
-> **NOTE**: In some other languages `Array`s _cannot include elements of multiple types_. In C, C++, Java, Swift, and others you cannot mix types. JavaScript, Python, Ruby, Lisp, and others permit this.
+> **NOTE**: In some other languages `Array`s _cannot include elements of
+> multiple types_. In C, C++, Java, Swift, and others you cannot mix types.
+> JavaScript, Python, Ruby, Lisp, and others permit this.
 
 Arrays are _ordered_, meaning that the elements in them will always appear in
 the same order. This also means that the `Array` `[1, 2, 3]` is different from
@@ -92,14 +101,14 @@ variable:
 ```js
 const primeNumbers = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37];
 
-const tvShows = ['Game of Thrones', 'Breaking Bad', 'Veep', 'Mad Men'];
+const tvShows = ["Game of Thrones", "Breaking Bad", "Veep", "Mad Men"];
 ```
 
 We can find out how many elements an `Array` contains by checking the `Array`'s
 built-in `length` property:
 
 ```js
-const myArray = ['This', 'array', 'has', 5, 'elements'];
+const myArray = ["This", "array", "has", 5, "elements"];
 
 myArray.length;
 // => 5
@@ -116,8 +125,8 @@ rewrite our lottery code to use an `Array`:
 ```js
 const winningNumbers = [32, 9, 14, 33, 48, 5];
 
-function logWinningNumbers (numbers) {
-  console.log('Winning numbers:', numbers);
+function logWinningNumbers(numbers) {
+  console.log("Winning numbers:", numbers);
 }
 
 logWinningNumbers(winningNumbers);
@@ -133,23 +142,20 @@ together."
 
 The one benefit of storing all six lottery numbers separately is that we had a
 really easy way to access each individual number. For example, we could just
-reference `powerBall` to grab the sixth number. Luckily, `Array`s offer an equally
-simple syntax for accessing individual members.
+reference `powerBall` to grab the sixth number. Luckily, `Array`s offer an
+equally simple syntax for accessing individual members.
 
-## Using the Computed Member Access Operator
+## Using Bracket Notation
 
 Every element in an `Array` is assigned a unique index value that corresponds to
 its place within the collection, **starting at 0**. The first element in the
 `Array` is at index `0`, the fifth element at index `4`, and the 428th element
-at index `427`. The _computed member access operator_ (`[]`) allows us to access
-the element at a given index.
-
-> **NOTE:** Most people just call it _bracket notation_ or the _bracket operator_, so don't worry too much about remembering the term _computed member access operator_.
+at index `427`. We can use **bracket notation** (`[]`) to access the element at
+a given index.
 
 ### Accessing an Element
 
-To access an element, we use the computed member access operator like this:
-`nameOfArray[index]`.
+To access an element, we use bracket notation like this: `nameOfArray[index]`.
 
 ```js
 const winningNumbers = [32, 9, 14, 33, 48, 5];
@@ -172,7 +178,34 @@ number of elements in the `Array`. If only we had an easy way to figure out how
 many elements are in the `Array`...
 
 ```js
-const alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+const alphabet = [
+  "a",
+  "b",
+  "c",
+  "d",
+  "e",
+  "f",
+  "g",
+  "h",
+  "i",
+  "j",
+  "k",
+  "l",
+  "m",
+  "n",
+  "o",
+  "p",
+  "q",
+  "r",
+  "s",
+  "t",
+  "u",
+  "v",
+  "w",
+  "x",
+  "y",
+  "z",
+];
 // => undefined
 
 alphabet.length;
@@ -182,53 +215,56 @@ alphabet[alphabet.length - 1];
 // => "z"
 ```
 
-This is why it's called the ***computed*** _member access operator_. We placed
-an expression (`alphabet.length - 1`) inside the square brackets, and the
-JavaScript engine _computed_ the value of that expression to determine which
+We placed an expression (`alphabet.length - 1`) inside the square brackets, and
+the JavaScript engine _computed_ the value of that expression to determine which
 element we were trying to access. In this case, `alphabet.length - 1` evaluated
 to `25`, so `alphabet[alphabet.length - 1]` became `alphabet[25]`.
 
 ## Updating the Value of an Element
 
-We can also use the computed member access operator (`[]`) — along with
-the assignment operator (`=`) — to update the value of an element in the
-array. To do that, we access the element we want then reassign that element's
-value using `=`. Say we've defined an array, `planets`:
+We can also use bracket notation (`[]`) — along with the assignment operator
+(`=`) — to update the value of an element in the array. To do that, we access
+the element we want then reassign that element's value using `=`. Say we've
+defined an array, `planets`:
 
 ```js
-const planets = ["Mercury", "Venus", "Earth", "Mars", "Juptier", "Saturn", "Uranus", "Neptune"];
+const planets = [
+  "Mercury",
+  "Venus",
+  "Earth",
+  "Mars",
+  "Juptier",
+  "Saturn",
+  "Uranus",
+  "Neptune",
+];
 //=> undefined
 ```
 
 Looks like we've got a typo. Let's fix it:
 
 ```js
-planets[4] = "Jupiter"; 
+planets[4] = "Jupiter";
 //=> "Jupiter"
 
 planets;
 //=> ["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune"]
 ```
 
-> **Note:** You might wonder why that worked, given that we declared `planets` using `const`. After all, declaring with `const` is supposed to prevent us from reassigning the value of the variable! This is an important thing to know about how `const` works with `Array`s. We are not able to reassign the array _itself_ but we **can** reassign any of its elements. We can also add or delete elements. JavaScript `Object`s work similarly when declared using `const` (which isn't surprising, given that `Array`s are a special type of `Object`).
-
-### Adding an Element to the End of an Array
-
-While it is not the best way to accomplish the task, we can also use the
-computed member access operator to add an element to the end of an array. If
-conclusive evidence of the existence of [Planet Nine][] is ever found, we could
-add it to the end of our array as follows:
+You might wonder why that worked, given that we declared `planets` using
+`const`. After all, declaring with `const` is supposed to prevent us from
+reassigning the value of the variable! This is an important thing to know about
+how `const` works with `Array`s. We are not able to reassign the array _itself_
+but we **can** reassign any of its elements. We can also add or delete elements.
+JavaScript `Object`s work similarly when declared using `const` (which isn't
+surprising, given that `Array`s are a special type of `Object`). The only thing
+`const` prevents us from doing is assigning a new value to the variable
+`planets` using the `=` operator:
 
 ```js
-planets[planets.length] = "Planet Nine"; // Why did we use planets.length here?
-// => "Planet Nine"
-
-planets;
-//=> ["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune", "Planet Nine"];
+planets = ["new", "array"];
+//=> Uncaught TypeError: Assignment to constant variable.
 ```
-
-We will learn better ways to add an element to the end of an array in the next
-lesson.
 
 ## Nested Arrays
 
@@ -236,7 +272,11 @@ We mentioned above that arrays can contain elements of **any** data type; this i
 **other `Array`s**:
 
 ```js
-const egregiouslyNestedArray = ['How', ['deep', ['can', ['we', ['go', ['?'], 'Pretty'], 'dang'], 'deep,'], 'it'], 'seems.'];
+const egregiouslyNestedArray = [
+  "How",
+  ["deep", ["can", ["we", ["go", ["?"], "Pretty"], "dang"], "deep,"], "it"],
+  "seems.",
+];
 ```
 
 If you examine the array above, you'll see it contains three elements, the
@@ -268,7 +308,8 @@ egregiouslyNestedArray[1][2];
 //=> 'it'
 ```
 
-We can continue drilling down in this way, adding another set of brackets for each nested array, until we get to the innermost array:
+We can continue drilling down in this way, adding another set of brackets for
+each nested array, until we get to the innermost array:
 
 ```js
 egregiouslyNestedArray[1][1][1][1][1];
@@ -284,14 +325,14 @@ egregiouslyNestedArray[1][1][1][1][1][0];
 
 While it's great that `Array`s allow us to store other `Array`s inside them,
 this is a terrible way to represent a deeply nested data structure. In general,
-it is best to keep your `Array`s to no more than two levels deep. Two levels is
-perfect for representing two-dimensional things like a tic-tac-toe board:
+it is best to keep your `Array`s to _no more than two levels deep_. Two levels
+is perfect for representing two-dimensional things, like a tic-tac-toe board:
 
 ```js
 const board = [
-  ['X', 'O', ' '],
-  [' ', 'X', 'O'],
-  ['X', ' ', 'O']
+  ["X", "O", " "],
+  [" ", "X", "O"],
+  ["X", " ", "O"],
 ];
 
 board;
@@ -300,7 +341,7 @@ board;
 
 The cool thing about representing a game board like that is in how we can access
 the different squares by specifying coordinates. The first `[]` operator grabs
-the row that we want, top (`board[0]`), middle (`board[1]`), or bottom
+the **row** that we want, top (`board[0]`), middle (`board[1]`), or bottom
 (`board[2]`). For example:
 
 ```js
@@ -334,8 +375,8 @@ manipulate arrays in various ways, for example, to add an element to the
 beginning or end of an `Array`.
 
 We have seen methods already in this course. In an earlier lesson, for example,
-we learned how to use a String method, `toUpperCase()`, to convert a String to
-all uppercase:
+we learned how to use a `String` method, `toUpperCase()`, to get the uppercase
+version of a `String`:
 
 ```js
 const string = "Hello";
@@ -344,20 +385,20 @@ string.toUpperCase();
 //=> "HELLO"
 ```
 
-As shown above, we call String methods _on_ a string or string variable using
-the dot notation. `Array` methods work in the same way. Some of them will take
-one or more arguments — for example, the element we want to add to the
-array. The arguments are passed in the parentheses after the method name.
+As shown above, we call `String` methods _on_ a string using dot notation.
+`Array` methods work in the same way. Some of them will take one or more
+arguments — for example, the element we want to add to the array. The arguments
+are passed in the parentheses after the method name.
 
 We will learn about these `Array` methods in the next lesson. Before we get to
 that, however, we need to introduce one more concept.
 
 ## Mutability
 
-Some methods update or _mutate_ the object they are called on; these methods
-are referred to as _destructive_. Other methods, known as _nondestructive_
-methods, leave the object intact. For example, the String method `toUpperCase()`
-is _nondestructive_:
+Some methods update or _mutate_ the object they are called on; these methods are
+referred to as _destructive_. Other methods, known as _nondestructive_ methods,
+leave the object intact. For example, the `String` method `toUpperCase()` is
+_nondestructive_:
 
 ```js
 const string = "Hello";
@@ -391,9 +432,8 @@ JavaScript `Array` methods.
 
 ## Resources
 
-+ MDN
-  + [Array][array]
+- [MDN: Array reference][array]
 
 [array]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
 [repl.it]: https://repl.it/languages/javascript
-[Planet Nine]: https://en.wikipedia.org/wiki/Planet_Nine
+[planet nine]: https://en.wikipedia.org/wiki/Planet_Nine
