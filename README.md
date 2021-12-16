@@ -101,7 +101,7 @@ variable:
 ```js
 const primeNumbers = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37];
 
-const tvShows = ["Game of Thrones", "Breaking Bad", "Veep", "Mad Men"];
+const flowers = ["Rose", "Tulip", "Orchid", "Lily"];
 ```
 
 We can find out how many elements an `Array` contains by checking the `Array`'s
@@ -233,7 +233,7 @@ const planets = [
   "Venus",
   "Earth",
   "Mars",
-  "Juptier",
+  "Jupiter",
   "Saturn",
   "Uranus",
   "Neptune",
