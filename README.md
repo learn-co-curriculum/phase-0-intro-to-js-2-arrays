@@ -233,7 +233,7 @@ const planets = [
   "Venus",
   "Earth",
   "Mars",
-  "Jupiter",
+  "Juptier",
   "Saturn",
   "Uranus",
   "Neptune",
