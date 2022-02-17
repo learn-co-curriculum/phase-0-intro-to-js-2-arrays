@@ -17,7 +17,9 @@ numbers. But sometimes we need a way to store a _collection_ of data. For this,
 we need data structures. In this and the next lesson, we will learn about a very
 useful data structure: `Array`s.
 
-Be sure to follow along with the examples in [repl.it][].
+Be sure to follow along with the examples in [replit][]. Remember that you can
+see the value of variables and other expressions by either using a `console.log`
+in the code window or entering them directly in the console window.
 
 ## Identify Data Structures and Arrays
 
@@ -435,5 +437,5 @@ JavaScript `Array` methods.
 - [MDN: Array reference][array]
 
 [array]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
-[repl.it]: https://repl.it/languages/javascript
+[replit]: https://replit.com/languages/javascript
 [planet nine]: https://en.wikipedia.org/wiki/Planet_Nine
