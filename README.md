@@ -225,9 +225,9 @@ to `25`, so `alphabet[alphabet.length - 1]` became `alphabet[25]`.
 ## Updating the Value of an Element
 
 We can also use bracket notation (`[]`) — along with the assignment operator
-(`=`) — to update the value of an element in the array. To do that, we access
-the element we want then reassign that element's value using `=`. Say we've
-defined an array, `planets`:
+(`=`) — to update the value of an element in the array.
+
+Say we've defined an array, `planets`:
 
 ```js
 const planets = [
@@ -243,7 +243,8 @@ const planets = [
 //=> undefined
 ```
 
-Looks like we've got a typo. Let's fix it:
+Looks like we've misspelled Jupiter. Let's fix it. To do that, we access
+the element we want (`planets[4]`), then reassign that element's value using `=`:
 
 ```js
 planets[4] = "Jupiter";
